@@ -78,7 +78,8 @@ a:hover {
 .right #positions-container,
 .right #biography-container,
 .right #skills-container,
-.right #awards-container {
+.right #awards-container,
+.right #teaching-container {
   font-family: 'Lora', serif;
   font-size: 1em;
   line-height: 1.7;
@@ -90,7 +91,6 @@ a:hover {
 #positions-container .position-list {
   display: grid;
   grid-template-columns: 160px auto;
-  /*row-gap: 0px;*/
 }
 
 #positions-container .date {
