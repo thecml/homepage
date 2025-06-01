@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christian Marius Lillelund - Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+    <img src="images/profile.jpg" alt="My Profile Picture" class="profile-pic" />
+    <h1>Christian Marius Lillelund</h1>
+    <p class="short-bio">
+    PhD Student at Aarhus University<br /><br />
+    Affiliated with<br />
+    <a href="https://ece.au.dk/en/" target="_blank" rel="noopener noreferrer">
+        Electrical and Computer Engineering, Aarhus University
+    </a><br />
+    <a href="https://www.ualberta.ca/" target="_blank" rel="noopener noreferrer">
+        Computing Science, University of Alberta (UofA)
+    </a>
+    </p>
+    <div class="contact">
+        <p><a href="mailto:chr1000@gmail.com">Email</a></p>
+        <p><a href="https://scholar.google.com/citations?user=-nTES3AAAAAJ&hl" target="_blank">Google Scholar</a></p>
+        <p><a href="http://www.linkedin.com/in/christianmariuslillelund" target="_blank">LinkedIn</a></p>
+        <p><a href="https://github.com/thecml" target="_blank">Github</a></p>
+        <p><a href="https://www.kaggle.com/christianlillelund" target="_blank">Kaggle</a></p>
+    </div>
+    </div>
+    <div class="right">
+    <h2>Biography</h2>
+    <div id="biography-container"></div>
+
+    <h2>Research Interests</h2>
+    <div id="research-interests-container"></div>
+
+    <h2>Positions</h2>
+    <div id="positions-container"></div>
+
+    <h2>Skills</h2>
+    <div id="skills-container"></div>
+
+    <h2>Awards</h2>
+    <div id="awards-container"></div>
+    </div>
+  </div>
+  
+<script>
+  function loadSection(id, url) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById(id).innerHTML = data;
+        })
+        .catch(err => {
+        console.error(`Error loading ${url}:`, err);
+        document.getElementById(id).innerHTML = "<p>Could not load content.</p>";
+        });
+    }
+
+    loadSection('biography-container', 'biography.html');
+    loadSection('research-interests-container', 'research_interests.html');
+    loadSection('positions-container', 'positions.html');
+    loadSection('skills-container', 'skills.html');
+    loadSection('awards-container', 'awards.html');
+</script>
+
+</body>
+</html>
