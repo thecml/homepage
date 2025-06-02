@@ -102,3 +102,23 @@ a:hover {
 #positions-container .role {
   margin-bottom: 5px;
 }
+
+.affiliation a {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.3rem;
+    text-decoration: none;
+    color: #0077b6;
+    font-size: 0.9rem; /* Smaller font size */
+    font-weight: normal; /* Remove bold styling */
+    transition: color 0.3s ease;
+}
+
+.affiliation a:hover {
+    color: #005f7f;
+}
+
+.affiliation i {
+    margin-right: 0.4rem;
+    font-size: 0.9rem; /* Match icon size to text */
+}
