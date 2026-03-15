@@ -1,80 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christian Marius Lillelund - Homepage</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Christian Marius Lillelund</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="container">
-    <div class="left">
-    <img src="images/me.jpg" alt="Christian Marius Lillelund" class="profile-pic" />
-    <h1>Christian Marius Lillelund</h1>
-    <p class="short-bio">
-    PhD Student at Aarhus University<br />
-    </p>
-    <div class="affiliation">
-        <a href="https://ece.au.dk/en/" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-university"></i> Electrical and Computer Engineering, Aarhus University
-        </a><br />
-        <a href="https://www.ualberta.ca/en/computing-science/index.html" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-university"></i> Computing Science, University of Alberta (UofA)
-        </a>
-    </div>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <div class="contact">
-        <p><a href="mailto:cl@ece.au.dk"><i class="fas fa-envelope"></i> Email</a></p>
-        <p><a href="https://scholar.google.com/citations?user=-nTES3AAAAAJ&hl" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a></p>
-        <p><a href="http://www.linkedin.com/in/christianmariuslillelund" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-        <p><a href="https://github.com/thecml" target="_blank"><i class="fab fa-github"></i> Github</a></p>
-        <p><a href="https://www.kaggle.com/christianlillelund" target="_blank"><i class="fab fa-kaggle"></i> Kaggle</a></p>
-    </div>
-    </div>
-    <div class="right">
-    <h2>Biography</h2>
-    <div id="biography-container"></div>
 
-    <h2>Research Interests</h2>
-    <div id="research-interests-container"></div>
+    <h2 class="name">Christian Marius Lillelund</h2>
 
-    <h2>Positions</h2>
-    <div id="positions-container"></div>
+    <table class="intro">
+      <tr>
+        <td class="image-column" valign="top">
+          <img src="images/me_2025.jpg" alt="Christian Marius Lillelund" class="profile">
+        </td>
 
-    <h2>Skills</h2>
-    <div id="skills-container"></div>
+        <td class="text-column" valign="top">
+          <p>
+          I am currently a Postdoc at the 
+          <a href="https://www.moma.dk/" target="_blank">Department of Molecular Medicine (MOMA)</a> 
+          at Aarhus University, Denmark, working in the 
+          <a href="https://www.moma.dk/bioinformatics/cancer-evolution-gene-regulation" target="_blank">
+          Computational Genomics &amp; Transcriptomics group</a> led by 
+          <a href="https://scholar.google.com/citations?hl=da&user=_pMkUTsAAAAJ" target="_blank">
+          Prof. Jakob Skou Pedersen</a>. My work focuses on developing AI models for detecting and predicting cancer from cell-free DNA (cfDNA) genomics data using large cancer genomics datasets.
+          </p>
 
-    <h2>Awards</h2>
-    <div id="awards-container"></div>
+          <p>
+          Previously, I completed my PhD at the 
+          <a href="https://ece.au.dk/en/" target="_blank">Department of Electrical and Computer Engineering</a> 
+          at Aarhus University under the supervision of Assoc. Prof.
+          <a href="https://pure.au.dk/portal/da/persons/cfp%40ece.au.dk/" target="_blank">
+          Christian Fischer Pedersen</a>. My PhD thesis, currently under assessment, focuses on survival prediction models for precision medicine, studying multiple time-to-event outcomes and censoring mechanisms, with applications such as predicting functional decline in ALS patients and estimating fall risk in older adults. As part of my PhD, I visited the 
+          <a href="https://www.ualberta.ca/en/computing-science/index.html" target="_blank">
+          Department of Computing Science</a> at the University of Alberta, Canada, where I was supervised by Prof. 
+          <a href="https://scholar.google.com/citations?user=Rn7APGIAAAAJ&hl" target="_blank">
+          Russ Greiner</a>.
+          </p>
 
-    <h2>Teaching Experience</h2>
-    <div id="teaching-container"></div>
-    </div>
+          <p>
+          My research interests lie in developing AI methods for healthcare, particularly for cancer detection, minimal residual disease (MRD) prediction and survival analysis. See my publications on <a href="https://scholar.google.com/citations?user=-nTES3AAAAAJ&hl" target="_blank">Google Scholar</a> and projects on <a href="https://github.com/thecml" target="_blank">GitHub</a>.  
+          </p>
+
+          <p>
+          Contact: clillelund [at] clin.au [dot] dk.
+          </p>
+
+        </td>
+      </tr>
+    </table>
+
   </div>
-  
-<script>
-  function loadSection(id, url) {
-    fetch(url)
-        .then(response => response.text())
-        .then(data => {
-        document.getElementById(id).innerHTML = data;
-        })
-        .catch(err => {
-        console.error(`Error loading ${url}:`, err);
-        document.getElementById(id).innerHTML = "<p>Could not load content.</p>";
-        });
-    }
-
-    loadSection('biography-container', 'biography.html');
-    loadSection('research-interests-container', 'research_interests.html');
-    loadSection('positions-container', 'positions.html');
-    loadSection('skills-container', 'skills.html');
-    loadSection('awards-container', 'awards.html');
-    loadSection('teaching-container', 'teaching.html');
-</script>
-
 </body>
 </html>
